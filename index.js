@@ -22,17 +22,24 @@ pFooter.textContent= textFooter
 
 let contenedor= document.getElementById("contenedor")
 
+console.log(contenedor)
+
+
+
 //6
 
 function crearCard(objeto){
-        return `<article>
-                    <h3>${objeto.nombre}<h/3>
-                    <img src="${objeto.foto}">
-                     <p>${objeto.descripcion}</p>
+        return `<article class="flex flex-col items-center w-64 h-78 border-2">
+                    <h3>${objeto.nombre}</h3>
+                    <img class="w-40 object-contain h-40 " src="${objeto.foto}">
+                     <p class="text-center">${objeto.descripcion}</p>
                  </article>
                         `
 }
 console.log(crearCard(frutas[0]))
+
+
+
 
 //7
 
@@ -56,6 +63,8 @@ h2.innerHTML=("Frutas Dulces")
 
 lista.appendChild(h2)
 
+h2.classList.add("font-bold" , "text-4xl")
+
 //ejercico 10
 
 function listaFrutas(array){
@@ -68,10 +77,12 @@ function listaFrutas(array){
         list.appendChild(sublist)
        }
     }
+    list.classList.add("list-disc" , "items-center" )
     return list
 }
 
 //ejercicio 11
 
 lista.appendChild(listaFrutas(frutas))
+
 
